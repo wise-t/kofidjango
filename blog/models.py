@@ -31,14 +31,15 @@ class category(models.Model):
 class Post(TimespamtedModel):
     title = models.CharField(max_length=255)
     title_tag = models.CharField(max_length=255)
-    #img = models.ImageField(upload_to='pics/')
+    
     author = models.ForeignKey(User,on_delete=models.CASCADE)
     body=RichTextField(blank=True, null=True)
     #body = models.TextField(default='addtext')
     post_date = models.DateField(auto_now_add=True,blank=True, null=True)
     category = models.CharField(max_length=255,default='category')
     likes = models.ManyToManyField(User, related_name='blog_posts')
-    
+    #img = models.ImageField(upload_to='pics/')
+
     def total_likes(self):
         return self.likes.count()
 
