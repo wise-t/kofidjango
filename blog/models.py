@@ -31,7 +31,7 @@ class category(models.Model):
 class Post(TimespamtedModel):
     title = models.CharField(max_length=255)
     title_tag = models.CharField(max_length=255)
-    #img = models.ImageField(upload_to='pics')
+    img = models.ImageField(upload_to='pics/')
     author = models.ForeignKey(User,on_delete=models.CASCADE)
     body=RichTextField(blank=True, null=True)
     #body = models.TextField(default='addtext')
