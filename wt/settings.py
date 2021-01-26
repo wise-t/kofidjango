@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ['https://wisdsol.herokuapp.com/','127.0.0.1','localhost']
 # Application definition
 
 INSTALLED_APPS = [
+    'django_extensions',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -117,8 +118,7 @@ import psycopg2.extensions
 # DATABASES = {
 #     'DEFAULT': {
 #         'ENGINE': 'DJANGO.DB.BACKENDS.SQLITE3',
-#         'NAME':OS.PATH.JOIN(BASE_DIR, 'DB.SQLITE3'),
-#     }
+#         'NAME':OS.PATH.JOIN(BASE_DIR, 'DB.SQLITE3')o
 # }
 
 DATABASES = {

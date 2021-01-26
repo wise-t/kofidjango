@@ -1,5 +1,5 @@
 from django import forms
-from .models import  Post,category,Comment
+from .models import  Post,Comment,category
 #choices=[('sport','sport'),('coding','coding'),('entertaiment','entertaiment')]
 choices=category.objects.all().values_list('name','name')
 
